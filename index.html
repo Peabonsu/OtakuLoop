@@ -144,26 +144,28 @@
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Danos tu feedback y únete al loop</h2>
       <p class="text-center text-gray-600 max-w-xl mx-auto mb-8">OtakuLoop aún es un proyecto en desarrollo, pero tu opinión es crucial. ¿Te resulta útil esta propuesta? ¿Qué mejorarías o añadirías? ¡Estaremos encantados de leerte!</p>
 
-      <form action="https://formsubmit.co/bartismyfavourite@gmail.com" method="POST" class="space-y-6 bg-white p-8 rounded-lg shadow-lg">
-        <input type="hidden" name="_next" value="gracias.html">
-        <input type="hidden" name="_subject" value="Nuevo mensaje desde OtakuLoop">
+<form action="https://formsubmit.co/bartismyfavourite@gmail.com" method="POST" class="space-y-6 bg-white p-8 rounded-lg shadow-lg" id="contact-form">
+    <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">Tu nombre</label>
+        <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500">
+    </div>
+    <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Tu correo electrónico</label>
+        <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500">
+    </div>
+    <div>
+        <label for="message" class="block text-sm font-medium text-gray-700">Tu mensaje</label>
+        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500"></textarea>
+    </div>
 
-        <div>
-          <label for="name" class="block text-sm font-medium text-gray-700">Tu nombre</label>
-          <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500">
-        </div>
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700">Tu correo electrónico</label>
-          <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500">
-        </div>
-        <div>
-          <label for="message" class="block text-sm font-medium text-gray-700">Tu mensaje</label>
-          <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500"></textarea>
-        </div>
-        <div>
-          <button type="submit" class="w-full py-3 px-6 bg-pink-500 text-white font-semibold rounded-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105 shadow-md">Enviar mensaje</button>
-        </div>
-      </form>
+    <!-- 👇 Línea nueva para redirigir al finalizar -->
+    <input type="hidden" name="_next" value="https://Peabonsu.github.io/otakuloop-landing/gracias.html">
+
+    <input type="hidden" name="_subject" value="Nuevo mensaje desde OtakuLoop">
+    <div>
+        <button type="submit" class="w-full py-3 px-6 bg-pink-500 text-white font-semibold rounded-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105 shadow-md">Enviar mensaje</button>
+    </div>
+</form>
     </div>
   </section>
 
