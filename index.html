@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OtakuLoop: Solo el manga que te importa</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5R9R2J5M4T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5R9R2J5M4T');
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -128,7 +137,8 @@
                 </div>
                 <input type="hidden" name="_subject" value="Nuevo mensaje desde OtakuLoop">
                 <input type="hidden" name="_next" value="https://peabonsu.github.io/OtakuLoop/gracias.html">
-                <input type="hidden" name="_captcha" value="false"> <div>
+                <input type="hidden" name="_captcha" value="false">
+                <div>
                     <button type="submit" class="w-full py-3 px-6 bg-pink-500 text-white font-semibold rounded-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105 shadow-md">Enviar mensaje</button>
                 </div>
             </form>
