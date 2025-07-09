@@ -1,95 +1,153 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OtakuLoop - Descubre solo el manga que amas</title>
+    <title>OtakuLoop: Solo el manga que te importa</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
     <style>
-      body {
-        font-family: 'Inter', sans-serif;
-      }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Oswald', sans-serif;
+        }
+        .feature-card img {
+            border-radius: 0.5rem;
+        }
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2rem !important;
+                line-height: 1.3 !important;
+            }
+            p {
+                font-size: 1rem !important;
+            }
+        }
     </style>
-  </head>
-  <body class="bg-white text-gray-800">
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Sticky Header -->
+    <header class="fixed top-0 left-0 w-full bg-white bg-opacity-90 backdrop-blur-sm shadow-md z-50">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <span class="text-xl font-bold text-pink-600">OtakuLoop</span>
+        <a href="#contact" class="text-sm bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600 transition">Unirme al loop</a>
+      </div>
+    </header>
+
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://i.postimg.cc/nr9hzspG/Hero-Otaku-Loop.png');">
-      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div class="relative z-10 text-center max-w-3xl px-6">
-        <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">Descubre solo el manga que realmente te interesa</h1>
-        <p class="mt-4 text-xl text-gray-200">OtakuLoop filtra los nuevos lanzamientos de manga para que solo veas los géneros y estilos que amas. Sin ruido, solo disfrute puro.</p>
-        <a href="#contact" class="mt-8 inline-block px-8 py-3 bg-pink-500 text-white font-semibold rounded-full hover:bg-pink-600 transition">Únete a la beta</a>
-      </div>
-    </section>
-
-    <!-- Problem and Value Proposition Section -->
-<section class="py-20 bg-gray-50">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">El Problema</h2>
-    <p class="text-lg text-gray-600 text-center mb-8">¿Te sientes abrumado por el ruido de las redes sociales? En un mar de novedades cada semana, es difícil encontrar mangas que realmente te interesen. Las publicaciones de las editoriales inundan tu feed, pero no siempre coinciden con tus gustos. OtakuLoop nace para resolver esto.</p>
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Nuestra Propuesta de Valor</h2>
-    <p class="text-lg text-gray-600 text-center mb-8">Nuestro sistema de filtros personalizados elimina el ruido y te permite descubrir exclusivamente mangas que se ajusten a tus preferencias. ¡Olvídate de la sobrecarga de información! Con OtakuLoop, tendrás una forma sencilla y eficiente de mantenerte al día con lo que realmente te interesa, sin perder tiempo en búsquedas interminables.</p>
-  </div>
-</section>
-    
-    <!-- Features Section -->
-    <section class="py-20 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">¿Qué ofrece OtakuLoop?</h2>
-        <div class="grid md:grid-cols-2 gap-12">
-          <div class="bg-white rounded-lg shadow-lg p-6 text-center">
-            <img src="https://i.postimg.cc/QNFQ50M0/Si-mbolo-Otaku-Loop.png" alt="Símbolo Loop" class="w-full h-48 object-contain mb-4">
-            <h3 class="text-xl font-semibold mb-2">Descubrimiento personalizado</h3>
-            <p>Filtra por género, estilo y tono. Excluye lo que no te gusta y sumérgete en historias hechas para ti.</p>
-          </div>
-          <div class="bg-white rounded-lg shadow-lg p-6 text-center">
-            <img src="https://i.postimg.cc/BtWQ1qv9/Mockup-Otaku-Loop.png" alt="Interfaz Swipe" class="w-full h-48 object-contain mb-4">
-            <h3 class="text-xl font-semibold mb-2">Desliza para guardar o descartar</h3>
-            <p>Una experiencia visual pensada para móvil. Guarda lo que te gusta, descarta lo que no, y sigue explorando.</p>
-          </div>
-          <div class="bg-white rounded-lg shadow-lg p-6 text-center">
-            <img src="https://i.postimg.cc/cHbJ07yJ/Panel-de-seguimiento-Otaku-Loop.png" alt="Panel de seguimiento" class="w-full h-48 object-contain mb-4">
-            <h3 class="text-xl font-semibold mb-2">Sigue tus series favoritas</h3>
-            <p>Recibe alertas cuando salga un nuevo tomo, consulta tu progreso y lleva el control de tus colecciones.</p>
-          </div>
-          <div class="bg-white rounded-lg shadow-lg p-6 text-center">
-            <img src="https://i.postimg.cc/qRR7PbFY/Email-Notification-Otaku-Loop.png" alt="Resumen por correo" class="w-full h-48 object-contain mb-4">
-            <h3 class="text-xl font-semibold mb-2">Resumen semanal por correo</h3>
-            <p>Te enviamos una lista curada de nuevos mangas que encajan contigo. Solo lo relevante. Solo para ti.</p>
-          </div>
+    <section class="relative h-screen flex items-center justify-center bg-cover bg-center pt-20" style="background-image: url('https://i.postimg.cc/nr9hzspG/Hero-Otaku-Loop.png');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative z-10 text-center max-w-4xl px-6">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">OtakuLoop: Solo el manga que te importa</h1>
+            <p class="mt-4 text-xl md:text-2xl text-gray-200">¿Te abruma la cantidad de lanzamientos, las recomendaciones irrelevantes y la frustración de no encontrar lo que realmente te apasiona? OtakuLoop es la solución definitiva para personalizar tu universo manga</p>
+            <a href="#contact" class="mt-8 inline-block px-10 py-4 bg-pink-500 text-white font-semibold rounded-full hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">¡Me uno al loop!</a>
         </div>
-      </div>
     </section>
 
-    <!-- Contact Form -->
-    <section id="contact" class="py-20 bg-white">
-      <div class="max-w-3xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-8">Contacto</h2>
-        <form action="mailto:bartismyfavourite@gmail.com" method="POST" enctype="text/plain" class="space-y-6">
-          <div>
-            <label for="name" class="block text-sm font-medium text-gray-700">Tu nombre</label>
-            <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500">
-          </div>
-          <div>
-            <label for="email" class="block text-sm font-medium text-gray-700">Tu correo electrónico</label>
-            <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500">
-          </div>
-          <div>
-            <label for="message" class="block text-sm font-medium text-gray-700">Tu mensaje</label>
-            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500"></textarea>
-          </div>
-          <div>
-            <button type="submit" class="w-full py-3 px-6 bg-pink-500 text-white font-semibold rounded-md hover:bg-pink-600 transition">Enviar mensaje</button>
-          </div>
-        </form>
-      </div>
+    <!-- Features Section - Descubre el Manga a Tu Manera -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6" data-aos="fade-up" data-aos-duration="700">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Descubre el Manga a Tu Manera</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-blue-50 rounded-lg shadow-lg p-8 text-center feature-card" data-aos="fade-up" data-aos-duration="700">
+                    <img src="https://i.postimg.cc/vH9XzLrs/Filtros-Poderosos-y-Personalizables.png" alt="" class="w-full h-48 object-contain mb-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-3">Filtros Poderosos y Personalizables</h3>
+                    <h4 class="text-lg font-semibold mb-2 text-pink-600">Di adiós a lo que no te interesa.</h4>
+                    <p class="text-gray-700">Con OtakuLoop, tienes el poder de excluir géneros que no son de tu agrado (como shonen o ecchi) y definir el tono que buscas (psicológico, realista, maduro). Así, tu feed de novedades estará siempre limpio y solo mostrará los lanzamientos que realmente se alinean con tus gustos. ¡Nunca más te sentirás abrumado por una sobrecarga de información irrelevante!</p>
+                </div>
+                <div class="bg-blue-50 rounded-lg shadow-lg p-8 text-center feature-card" data-aos="fade-up" data-aos-duration="700">
+                    <img src="https://i.postimg.cc/T2KtyXhh/Sugerencias-Inteligentes-en-Tu-Home.png" alt="" class="w-full h-48 object-contain mb-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-3">Sugerencias Inteligentes en Tu Home</h3>
+                    <h4 class="text-lg font-semibold mb-2 text-pink-600">Tu Home, tu reflejo.</h4>
+                    <p class="text-gray-700">Olvídate de las recomendaciones genéricas. OtakuLoop aprende de tus interacciones: lo que seleccionas, lo que descartas, lo que buscas. Con cada elección, nuestra IA refina sus sugerencias, ofreciéndote un flujo constante de manga que te encantará, haciendo el descubrimiento más sencillo y visual, basado en portadas, estilos gráficos y reseñas.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-100 py-6 text-center text-sm text-gray-500">
-      &copy; 2025 OtakuLoop. Todos los derechos reservados.
+    <!-- Features Section - Nunca Más Te Pierdas un Lanzamiento -->
+    <section class="py-20 bg-gradient-to-r from-blue-50 to-pink-50">
+        <div class="max-w-6xl mx-auto px-6" data-aos="fade-up" data-aos-duration="700">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Nunca Más Te Pierdas un Lanzamiento</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center feature-card" data-aos="fade-up" data-aos-duration="700">
+                    <img src="https://i.postimg.cc/qRR7PbFY/Email-Notification-Otaku-Loop.png" alt="" class="w-full h-48 object-contain mb-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-3">Resumen Semanal</h3>
+                    <h4 class="text-lg font-semibold mb-2 text-pink-600">Tu dosis semanal de manga perfecto.</h4>
+                    <p class="text-gray-700">Recibe un email cada semana con un resumen presentando entre 3 y 5 títulos que cumplen rigurosamente con tus filtros y preferencias. Es la manera ideal de mantenerte al día sin esfuerzo y sin la necesidad de recurrir a métodos manuales como hojas de cálculo o recordatorios.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center feature-card" data-aos="fade-up" data-aos-duration="700">
+                    <img src="https://i.postimg.cc/MTTjFxgB/Alertas-Personalizadas.png" alt="" class="w-full h-48 object-contain mb-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-3">Alertas Personalizadas</h3>
+                    <h4 class="text-lg font-semibold mb-2 text-pink-600">Sigue tus sagas, autores y editoriales sin estrés.</h4>
+                    <p class="text-gray-700">Indica qué series estás siguiendo y OtakuLoop se encargará del resto. Recibirás notificaciones cuando se publique un nuevo tomo de tus colecciones, cuando tus autores favoritos lancen nuevas obras o cuando tus editoriales preferidas anuncien nuevas licencias o eventos. No más repeticiones ni lanzamientos perdidos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section - Organiza y Comparte Tu Pasión -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6" data-aos="fade-up" data-aos-duration="700">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Organiza y Comparte Tu Pasión</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-purple-50 rounded-lg shadow-lg p-8 text-center feature-card" data-aos="fade-up" data-aos-duration="700">
+                    <img src="https://i.postimg.cc/HxV97QYF/Tu-Panel-de-Colecciones.png" alt="" class="w-full h-48 object-contain mb-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-3">Tu Panel de Colecciones</h3>
+                    <h4 class="text-lg font-semibold mb-2 text-pink-600">Todo tu universo manga en un solo lugar.</h4>
+                    <p class="text-gray-700">Visualiza de un vistazo qué colecciones estás leyendo, qué tomos te faltan y, lo más importante, cuándo sale el próximo tomo en tu país. Un panel intuitivo que te da el control total sobre tu biblioteca personal.</p>
+                </div>
+                <div class="bg-purple-50 rounded-lg shadow-lg p-8 text-center feature-card" data-aos="fade-up" data-aos-duration="700">
+                    <img src="https://i.postimg.cc/9z3R090P/Listas-Pu-blicas-y-Compartidas.png" alt="" class="w-full h-48 object-contain mb-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-3">Listas Públicas y Compartidas</h3>
+                    <h4 class="text-lg font-semibold mb-2 text-pink-600">Conecta con la comunidad.</h4>
+                    <p class="text-gray-700">Descubre y sigue listas de manga creadas por otros lectores con gustos similares a los tuyos. Comparte tus propias listas y conviértete en un referente para otros otaku. La comunidad es clave para un descubrimiento enriquecedor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Contact Form -->
+    <section id="contact" class="py-20 bg-gradient-to-r from-blue-50 to-pink-50">
+        <div class="max-w-3xl mx-auto px-6" data-aos="fade-up" data-aos-duration="700">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Danos tu feedback y únete al loop</h2>
+            <p class="text-center text-gray-600 max-w-xl mx-auto mb-8">OtakuLoop aún es un proyecto en desarrollo, pero tu opinión es crucial. ¿Te resulta útil esta propuesta? ¿Qué mejorarías o añadirías? Si tienes ideas, sugerencias o simplemente quieres darnos tu impresión, ¡estaremos encantados de leerte!</p>
+            <form action="mailto:bartismyfavourite@gmail.com" method="POST" enctype="text/plain" class="space-y-6 bg-white p-8 rounded-lg shadow-lg">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Tu nombre</label>
+                    <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Tu correo electrónico</label>
+                    <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">Tu mensaje</label>
+                    <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="w-full py-3 px-6 bg-pink-500 text-white font-semibold rounded-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105 shadow-md">Enviar mensaje</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer + AOS Script -->
+    <footer class="bg-gray-800 py-6 text-center text-sm text-gray-400">
+        &copy; 2025 OtakuLoop. Todos los derechos reservados.
     </footer>
-  </body>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+</body>
 </html>
